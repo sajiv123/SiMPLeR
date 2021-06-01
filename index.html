@@ -232,12 +232,17 @@
         <div class="content has-text-justified">
           <img src="static/images/coverImage.png" style='width:100%;'>
         </div>
+        <div class="content has-text-justified">
+		<p>
+		  This paper is in review for the <a href="https://www.cacre.org/index.html">th International Conference on Automation, Control and Robotics Engineering (CACRE 2021)</a> which will be held in July 2021.
+		</p>
+	  </div>
       </div>
     </div>
   </div>
 </section>
-  
-  
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -246,13 +251,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose a mechanically simple and cheap design for a series elastic actuator with controllable stiffness. 
-            Such characteristics are necessary for animals for running, jumping, throwing, and manipulation, yet in robots, 
-            variable stiffness actuators are either complicated or mimicked at low bandwidth through feedback controllers. 
-            A robust and simple design is needed to build reliable and cheap robots with animal capabilities. The key 
-            insight of our design is attaching torsional springs to timing belts to create a variable stiffness linear 
-            spring. In an antagonistic pair, varying the distance between motor and joint then varies the actuator stiffness. 
-            We build a prototype of our proposed actuator, show the theoretical behavior matches the experimental characterization, 
+            We propose a mechanically simple and cheap design for a series elastic actuator with controllable stiffness.
+            Such characteristics are necessary for animals for running, jumping, throwing, and manipulation, yet in robots,
+            variable stiffness actuators are either complicated or mimicked at low bandwidth through feedback controllers.
+            A robust and simple design is needed to build reliable and cheap robots with animal capabilities. The key
+            insight of our design is attaching torsional springs to timing belts to create a variable stiffness linear
+            spring. In an antagonistic pair, varying the distance between motor and joint then varies the actuator stiffness.
+            We build a prototype of our proposed actuator, show the theoretical behavior matches the experimental characterization,
             and demonstrate an application to robotic one-legged hopping.
           </p>
         </div>
@@ -374,7 +379,7 @@
           </video>
         </div> -->
         <!--/ Re-rendering. -->
-<!-- 
+<!--
       </div>
     </div> -->
     <!--/ Animation. -->
@@ -410,19 +415,116 @@
 <!--   </div>
 </section> -->
 <section class="section">
-  <div class="container-fluid">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Torsion Spring Antagonistic Setup</h2>
+          <p>
+            Implementing torsion springs in a belt transmission and changing the joint-motor distance results in variable joint stiffness, which can be controlled by the pretension.
+          </p>
+          <img src="static/images/torsionForce.png" style='width:100%;'>
+          <img src="static/images/SEAsetup.png" style='width:100%;'>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Single-Leg Platform</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Humans utilize variable stiffness in their legs to enable a multitude of benefits. Specifically, they can store the energy from landing from a large drop height. Fixed passive compliance is not desirable in legged robots, as it limits the maximum operation speed of robots and the payload they can carry, as any load that would cause a deflection too great by the elastic components can result in robot failure. We designed a platform to test the implementation of our VSA design in motions such as hopping.
+            </p>
+            <img src="static/images/legDropDiagram.png" style='width:100%;'>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Characterization</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our characterization expriments demonstrate that the actuator behaves similar to the prediced models. We carried out two tests, the first in which we fix the deflection and measure the torque at different deflections. In the second, we fix the stiffness and measure the torque-deflection relationship within the defined operating stiffness.
+          </p>
+        </div>
+        <img src="static/images/characterization.png" style='width:100%;'>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Hopping</h3>
+        <div class="content has-text-justified">
+          <p>
+            Hopping is very similar to running in the sense that they are both periodic motions that involve applying a force to the ground and moving the center of mass of the robot. Similar to humans, our leg requires different stiffness for higher or lower frequency hopping.
+          </p>
+        </div>
+        <img src="static/images/hoppingData.png" style='width:100%;'>
+
+        <h3 class="title is-4">Leg-Drop</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our expriments show that from a fixed jump height, users can select a desired final height and initial leg angle for which the stiffness can be adjusted for an oscillation-less drop, in which the energy from the drop is completely absorbed in the torsion springs. Our predicted models perfromed with an only 1.885% error from the experimental.
+          </p>
+        </div>
+        <!-- <img src="static/images/dropData.png" style='width:50%;'> -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <img src="static/images/dropData.png" style='width:50%;'>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
 <div class="columns is-centered has-text-centered">
   <div class="column is-two-thirds">
     <h2 class="title is-2">Paper</h2>
     <div class="content has-text-justified">
 
     <embed src="static/simpler-paper.pdf" width="100%" height='700px'/>
-  
+
 </div>
 </div>
 </div>
 </div>
 </section>
+
+<section class='section'>
+  <div class='container'>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+  </div>
+  <div class="content has-text-justified">
+		<p>
+		  Preliminary work on the design of this actuator was presented in the <a href="http://gravishlab.ucsd.edu/iros2020/">2020 Robotics-Insipired Biology Workshop at the IEEE Conference on Robotics and Systems (IROS)</a>
+		</p>
+	  </div>
+    <embed src="static/VSA_Bio-inspired.pdf" width="100%" height='700px'/>
+
+</div>
+</div>
+</div>
+</section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
