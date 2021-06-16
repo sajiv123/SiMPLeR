@@ -1,2 +1,2 @@
 # SiMPLeR
-SiMPLeR: A Series-Elastic Manipulator with Passive Variable Stiffness for Legged Robots
+Webpage for the publication "SiMPLeR: A Series-Elastic Manipulator with Passive Variable Stiffness for Legged Robots"
